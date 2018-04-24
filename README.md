@@ -22,8 +22,8 @@ This is not an issue with embedded malware in a document.
 3. Mac: curl via terminal
 
 For 1. and 3. a simple netcat listening on the designated ports will receive the data you need.
-For 2. Make use your email server and a trash account to send the data and receive the data.
-Replace any <> with your specific variable.
+For 2. Use your email server and a trash account to send the data and receive the data.
+**Replace any <> with your specific variable.**
 
 Added line for a command prompt/terminal to display "This disk has a corrupted sector.  Please contact the manufacturer for further instruction."
 This is to lead to less questioning by unknowing users.
