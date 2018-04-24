@@ -1,4 +1,4 @@
-#MalicUSB
+# MalicUSB
 This repository is used for code used to exfiltrate data from the target of the USB attack.
 Since this is graduate research no data but the username and computer name may be extracted.
 There are a few type of ways to exfiltrate the data that is being explored.  The current payloads use duckyscript to execute HID attacks quickly.
@@ -15,7 +15,7 @@ This is just a simple example without any malicious intent.
 The current issue with HID attacks is they are operating system dependent so the USB with the malware must specifically be targeted at an OS
 This is not an issue with embedded malware in a document.
 
-###Ways of exfiltration
+### Ways of exfiltration
 1. Windows: TcpClient via Powershell
 2. Windows: Email using Net.Mail.Mailmessage and Net.Mail.SMTPClient via Powershell
 3. Mac: curl via terminal
