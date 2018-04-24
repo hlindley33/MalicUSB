@@ -7,6 +7,7 @@ In the future Office Product macro attacks will be explored, but these must be o
 Currently these attacks are simple because the data being extracted is readily available, but these methods can be used to do much more than I currently have shown.
 This is just a simple example without any malicious intent.
 
+### Ways to get USB into target computer
 1. Road apple
 2. Social Engineering
 3. Insertion of device into an unoccupied computer
