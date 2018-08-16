@@ -11,15 +11,16 @@ This is just a simple example without any malicious intent.
 1. Road apple
 2. Social Engineering
 3. Insertion of device into an unoccupied computer
-4. Embed malware in a file on the USB and wait for it to be opened
+4. Embed malware in a file on the USB and wait for it to be opened (Word VBA)
 
 The current issue with HID attacks is they are operating system dependent so the USB with the malware must specifically be targeted at an OS
-This is not an issue with embedded malware in a document.
+This is not an issue with embedded malware in a document.  
 
 ### Ways of exfiltration
 1. Windows: TcpClient via Powershell
 2. Windows: Email using Net.Mail.Mailmessage and Net.Mail.SMTPClient via Powershell
 3. Mac: curl via terminal
+4. Both(Mac is a WIP): Word document with a malicious macro embedded.  The document must be designed in a way that gets the user to click the button on the page to launch the macro. I am not using 'on workbook open' macros because anti-viruses tend to flag them.  If you design where a button will be clicked, then it is much more likely to pass anit-virus detection.  In a real attack code obfuscation would be used as well.
 
 For 1. and 3. a simple netcat listening on the designated ports will receive the data you need.
 For 2. Use your email server and a trash account to send the data and receive the data.
