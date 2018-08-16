@@ -20,9 +20,9 @@ This is not an issue with embedded malware in a document.
 1. Windows: TcpClient via Powershell
 2. Windows: Email using Net.Mail.Mailmessage and Net.Mail.SMTPClient via Powershell
 3. Mac: curl via terminal
-4. Both(Mac is a WIP): Word document with a malicious macro embedded.  The document must be designed in a way that gets the user to click the button on the page to launch the macro. I am not using 'on workbook open' macros because anti-viruses tend to flag them.  If you design where a button will be clicked, then it is much more likely to pass anit-virus detection.  In a real attack code obfuscation would be used as well.
+4. Both(Mac is a WIP): Word document with a malicious macro embedded.  The document must be designed in a way that gets the user to click the button on the page to launch the macro. I am not using 'on workbook open' macros because anti-viruses tend to flag them.  If you design where a button will be clicked, then it is much more likely to pass anit-virus detection.  In a real attack code obfuscation would be used as well.  This can also be used to send emails by using code from 2.
 
-For 1. and 3. a simple netcat listening on the designated ports will receive the data you need.
+For 1,3, and 4: a simple netcat listening on the designated ports will receive the data you need.
 For 2. Use your email server and a trash account to send the data and receive the data.
 **Replace any <> with your specific variable.**
 
