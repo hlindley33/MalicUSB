@@ -4,7 +4,7 @@ DELAY 300
 STRING Terminal
 ENTER
 DELAY 750
-STRING curl -d "Username: $USER --- Comp  Name: $HOSTNAME" -X POST --ssl-reqd <remoteIpAddress>
+STRING curl -d "Location: <location> --- Comp  Name: $HOSTNAME," -X POST --ssl-reqd <remoteIpAddress>
 ENTER
 DELAY 500
 CTRL c
